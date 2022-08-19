@@ -1,5 +1,5 @@
 export class Quiz {
-    constructor() {
+    constructor(questions) {
         this.questions = questions
         this.score = 0
         this.questionIndex = 0
@@ -9,7 +9,7 @@ export class Quiz {
         return this.questions[this.questionIndex]
     }
 
-    continue(answer){
+    validateAndContinue(answer){
       if (this.getCurrentQuestion().isCorrectAnswer(answer)) { 
          this.score++
       }
